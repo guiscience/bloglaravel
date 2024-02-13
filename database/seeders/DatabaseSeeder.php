@@ -18,5 +18,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        // rodar apenas uma classe de seed
+        /* $this->call(ArticlesSeed::class); */
+
+        //rodar varias classes ao mesmo tempo
+         $this->call([
+            CategoriesSeed::class,
+            ArticlesSeed::class
+        ]);
+        
     }
 }
